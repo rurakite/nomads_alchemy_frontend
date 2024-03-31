@@ -1,0 +1,177 @@
+/* Colors */
+:root {
+  --PrimaryColor: #6EFAFB;
+  --HooverColor: #FFDB58;
+  --whiteColor: #ffffff;
+  --greyColor1: #222629;
+  --greyColor2: #292E32;
+  --greyColor3: #cccccc;
+  --blackColor: #1C1F22;
+  --buttonColor: linear-gradient(90deg, #FAFF00 0%, #00ACB1 100%);
+}
+
+.navBarSection .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+.navBarSection .header .logoDiv {
+  border: 1.5px solid var(--whiteColor);
+  background: var(--greyColor2);
+  border-radius: 30%;
+}
+.navBarSection .header .logoDiv .logo {
+  color: var(--whiteColor);
+  font-weight: 500;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .logoDiv .logo .icon {
+  color: var(--HooverColor);
+  font-size: 35px;
+}
+.navBarSection .header .logoDiv .logo .brandName {
+  font-size: 18px;
+  display: inline-block;
+  width: 100px;
+  padding-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background: var(--greyColor2);
+    position: absolute;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1.2rem;
+    width: 100%;
+    top: 0;
+    left: -500%;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+    transition: 0.5s ease;
+    z-index: 1000;
+  }
+  .navBarSection .header .navBar .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .navBarSection .header .navBar .navLists .navItem {
+    padding: 0.5rem 0;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--greyColor3);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns {
+    flex-direction: column;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn {
+    margin-top: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a:hover {
+    color: var(--greyColor1);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
+    background: none;
+    border: 1px solid var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn a {
+    color: var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
+    background: var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
+    color: var(--greyColor1);
+  }
+  .navBarSection .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1.7rem;
+    right: 0.8rem;
+    color: var(--greyColor3);
+  }
+  .navBarSection .header .navBar .closeNavbar:hover .icon {
+    color: var(--HooverColor);
+  }
+  .navBarSection .header .activeNavbar {
+    left: 0;
+  }
+}
+.navBarSection .header .toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--whiteColor);
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--HooverColor);
+}
+.navBarSection .activeHeader {
+  background: var(--greyColor2);
+  box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+}
+
+@media screen and (min-width: 769px) {
+  .navBarSection .toggleNavbar, .navBarSection .closeNavbar {
+    display: none;
+  }
+  .navBarSection .header {
+    padding: 1rem 2rem;
+  }
+  .navBarSection .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--whiteColor);
+    padding: 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .btn {
+    margin-left: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .btn a {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .loginBtn {
+    background: none;
+    border: 1px solid var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .loginBtn a {
+    color: var(--whiteColor);
+  }
+  .navBarSection .header .navBar .navLists .loginBtn:hover {
+    background: var(--HooverColor);
+  }
+  .navBarSection .header .navBar .navLists .loginBtn:hover a {
+    color: var(--greyColor1);
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1095px) {
+  .header {
+    padding: 1rem 8.5rem !important;
+  }
+}/*# sourceMappingURL=Navbar.css.map */
