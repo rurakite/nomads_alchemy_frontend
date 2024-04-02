@@ -41,7 +41,7 @@ const handlePageChange = (url) => {
 
   const links = [];
   if (totalResults > 0) {
-    for (let i = 1; i <= Math.ceil(totalResults / 8); i++) {
+    for (let i = 1; i <= Math.ceil(totalResults / 24); i++) {
       links.push(
         <li key={i}>
           <Link
@@ -115,7 +115,9 @@ const handlePageChange = (url) => {
                     <h3>{country.capital}</h3>
                     <p>The capital of {country.name}</p>
 
-                    <BsArrowRightShort className="icon" />
+                    <Link to={`/country/${country.id}`}>
+                      <BsArrowRightShort className="icon" />
+                    </Link>
                   </div>
                 </div>
                 <div className="destFooter">

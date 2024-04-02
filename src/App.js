@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import CountriesList from './Components/CountriesList/CountriesList';
+import SingleCountry from './Components/SingleCountry/SingleCountry';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/countries/" element={<CountriesList />} />
+        <Route path="/country/:id/" element={<SingleCountry />} />
       </Routes>
       <Footer />
     </>

@@ -1,10 +1,27 @@
-/* Colors */
-:root {
-  --PrimaryColor: #6EFAFB;
-  --HooverColor: #FFDB58;
-  --greyColor1: #222629;
-  --greyColor2: #292E32;
-  --greyColor3: #cccccc;
-  --blackColor: #1C1F22;
-  --buttonColor: linear-gradient(90deg, #FAFF00 0%, #00ACB1 100%);
-}/*# sourceMappingURL=singleCountry.css.map */
+.single-country-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  max-width: 200px;
+  height: auto;
+  margin-top: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
