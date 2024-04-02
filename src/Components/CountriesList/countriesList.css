@@ -1,0 +1,83 @@
+:root {
+  --PrimaryColor: #7aa0c4;
+  --HooverColor: #FFDB58;
+  --greyColor1: #222629;
+  --greyColor2: #292E32;
+  --whiteColor: #ffffff;
+  --greyColor3: #cccccc;
+  --blackColor: #1C1F22;
+  --buttonColor: linear-gradient(90deg, #FAFF00 0%, #00ACB1 100%);
+  /* --box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45); */
+}
+
+.secContainer .secPagination {
+  padding: 1rem;
+  width: 12rem;
+  text-align: center;
+}
+.secContainer .secPagination .pagination {
+  display: flex;
+  list-style: none;
+}
+.secContainer .secPagination .pagination li {
+  flex: 1;
+  margin: 0 0.1rem;
+  background: var(--greyColor1);
+  color: var(--whiteColor);
+  border-radius: 10px;
+}
+.secContainer .secPagination .pagination li .link {
+  font-size: 15px;
+  text-decoration: none;
+  background: var(--greyColor1);
+  color: var(--whiteColor);
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  display: block;
+  line-height: 30px;
+}
+.secContainer .secPagination .pagination li .link:hover {
+  background: var(--greyColor3);
+  color: var(--greyColor1);
+}
+
+.singleDestination .destFooter {
+  padding: 0.5rem !important;
+}
+.singleDestination .destFooter .destText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.3rem 0.5rem 0.3rem;
+}
+.singleDestination .destFooter .destText h6 {
+  color: var(--greyColor1);
+  font-size: 13px;
+}
+.singleDestination .destFooter .destText .flex {
+  font-size: 16px;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(5px);
+}
+.singleDestination .destFooter .destText .flex .icon {
+  color: var(--HooverColor);
+  height: 20px;
+  width: 30px;
+  box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.25);
+}
+.singleDestination .destFooter .destIcons {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.1rem 0 0.1rem;
+}
+.singleDestination .destFooter .destIcons .destIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singleDestination .destFooter .destIcons span {
+  font-size: 0.7rem;
+}/*# sourceMappingURL=countriesList.css.map */

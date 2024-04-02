@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
+import { React } from "react";
+import { Route, Routes } from "react-router-dom";
+
+
+
 import './app.css'
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
-import Popular from './Components/Popular/Popular';
-import Features from "./Components/Features/Features";
-import Countries from './Components/Countries/Countries';  
-import Visas from './Components/Visas/Visas';
-import About from './Components/About/About';
-import Blog from './Components/Blog/Blog';
 import Footer from './Components/Footer/Footer';
+import CountriesList from './Components/CountriesList/CountriesList';
 
 
 
@@ -16,14 +15,11 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Home />
-      <Popular />
-      <About />
-      <Blog />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/countries/" element={<CountriesList />} />
+      </Routes>
       <Footer />
-      {/* <Countries />
-      <Visas />
-      <Features /> */}
     </>
   );
 };

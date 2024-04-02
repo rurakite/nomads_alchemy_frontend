@@ -3,6 +3,8 @@ import './footer.css';
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+import { Link } from "react-router-dom";
+
 import { GiFizzingFlask } from "react-icons/gi";
 import { ImFacebook } from "react-icons/im";
 import { BsTwitterX } from "react-icons/bs";
@@ -22,12 +24,12 @@ const Footer = () => {
             
             className="footerLogo"
           >
-            <a href="#" className="logo flex">
+            <Link to="/" className="logo flex link">
               <h1 className="flex">
                 <GiFizzingFlask className="icon" />
                 <span className="brandName">Nomad's Alchemy</span>
               </h1>
-            </a>
+            </Link>
           </div>
 
           <div
@@ -45,16 +47,16 @@ const Footer = () => {
         >
           <span className="linkTitle">Information</span>
           <li>
-            <a href="">Home</a>
+            <Link to="" className="link">Home</Link>
           </li>
           <li>
-            <a href="">Visas</a>
+            <Link to="" className="link">Visas</Link>
           </li>
           <li>
-            <a href="">Countries</a>
+            <Link to="" className="link">Countries</Link>
           </li>
           <li>
-            <a href="">Blog</a>
+            <Link to="" className="link">Blog</Link>
           </li>
         </div>
 
@@ -65,16 +67,16 @@ const Footer = () => {
         >
           <span className="linkTitle">Useful Links</span>
           <li>
-            <a href="">Destination</a>
+            <Link to="" className="link">Destination</Link>
           </li>
           <li>
-            <a href="">Activities</a>
+            <Link to="" className="link">Activities</Link>
           </li>
           <li>
-            <a href="">Support</a>
+            <Link to="" className="link">Support</Link>
           </li>
           <li>
-            <a href="">Privacy</a>
+            <Link to="" className="link">Privacy</Link>
           </li>
         </div>
 

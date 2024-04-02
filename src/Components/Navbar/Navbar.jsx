@@ -3,6 +3,7 @@ import './navbar.css';
 import { GiFizzingFlask } from 'react-icons/gi';
 import { AiFillCloseCircle } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 //Code to toggle show navbar
@@ -32,53 +33,57 @@ const Navbar = () => {
     <section className="navBarSection">
       <div className={transparent}>
         <div className="logoDiv">
-          <a href="#" className="logo">
+          <Link to="/" className="logo link">
             <h1 className="flex">
               <GiFizzingFlask className="icon" />
               <span className="brandName">Nomad's Alchemy</span>
             </h1>
-          </a>
+          </Link>
         </div>
 
         <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
-              <a href="#" className="navLink">
+              <Link to="#" className="navLink link">
                 Home
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <Link to="#" className="navLink link">
                 Visas
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <Link to="/countries/" className="navLink link">
                 Countries
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <Link to="#" className="navLink link">
                 Activities
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className="navLink">
+              <Link to="#" className="navLink link">
                 About
-              </a>
+              </Link>
             </li>
 
             <div className="headerBtns flex">
               <button className="btn loginBtn">
-                <a href="#">Login</a>
+                <Link to="#" className="link">
+                  Login
+                </Link>
               </button>
 
               <button className="btn">
-                <a href="#">Sign Up</a>
+                <Link to="#" className="link">
+                  Sign Up
+                </Link>
               </button>
             </div>
           </ul>

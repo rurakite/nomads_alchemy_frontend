@@ -68,13 +68,13 @@
   color: var(--PrimaryColor);
   font-weight: 700;
 }
-.footer .secContainer .footerLinks a {
+.footer .secContainer .footerLinks .link {
   color: var(--greyColor3);
 }
 .footer .secContainer .footerLinks li:hover {
   transform: translateX(10px);
 }
-.footer .secContainer .footerLinks li:hover a {
+.footer .secContainer .footerLinks li:hover .link {
   color: var(--HooverColor);
 }
 @media screen and (min-width: 448px) {

@@ -48,7 +48,11 @@
             }
             .btn{
                 padding: .6rem 1.5rem;
-                
+                font-weight: 500;
+                .link{
+                    text-decoration: none;
+                    color: var(--greyColor2);
+                }
             }
         }
         

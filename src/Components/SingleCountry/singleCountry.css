@@ -1,0 +1,10 @@
+/* Colors */
+:root {
+  --PrimaryColor: #6EFAFB;
+  --HooverColor: #FFDB58;
+  --greyColor1: #222629;
+  --greyColor2: #292E32;
+  --greyColor3: #cccccc;
+  --blackColor: #1C1F22;
+  --buttonColor: linear-gradient(90deg, #FAFF00 0%, #00ACB1 100%);
+}/*# sourceMappingURL=singleCountry.css.map */

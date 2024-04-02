@@ -79,23 +79,23 @@
   .navBarSection .header .navBar .navLists .headerBtns .btn {
     margin-top: 1rem;
   }
-  .navBarSection .header .navBar .navLists .headerBtns .btn a {
+  .navBarSection .header .navBar .navLists .headerBtns .btn .link {
     font-weight: 600;
   }
-  .navBarSection .header .navBar .navLists .headerBtns .btn a:hover {
+  .navBarSection .header .navBar .navLists .headerBtns .btn .link:hover {
     color: var(--greyColor1);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
     background: none;
     border: 1px solid var(--HooverColor);
   }
-  .navBarSection .header .navBar .navLists .headerBtns .loginBtn a {
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn .link {
     color: var(--HooverColor);
   }
   .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
     background: var(--HooverColor);
   }
-  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover .link {
     color: var(--greyColor1);
   }
   .navBarSection .header .navBar .closeNavbar {
@@ -148,20 +148,21 @@
   .navBarSection .header .navBar .navLists .btn {
     margin-left: 1rem;
   }
-  .navBarSection .header .navBar .navLists .btn a {
+  .navBarSection .header .navBar .navLists .btn .link {
     font-weight: 600;
+    color: var(--greyColor2);
   }
   .navBarSection .header .navBar .navLists .loginBtn {
     background: none;
     border: 1px solid var(--HooverColor);
   }
-  .navBarSection .header .navBar .navLists .loginBtn a {
+  .navBarSection .header .navBar .navLists .loginBtn .link {
     color: var(--whiteColor);
   }
   .navBarSection .header .navBar .navLists .loginBtn:hover {
     background: var(--HooverColor);
   }
-  .navBarSection .header .navBar .navLists .loginBtn:hover a {
+  .navBarSection .header .navBar .navLists .loginBtn:hover .link {
     color: var(--greyColor1);
   }
 }

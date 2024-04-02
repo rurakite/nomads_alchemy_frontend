@@ -42,6 +42,11 @@
 }
 .home .secContainer .homeText .btn {
   padding: 0.6rem 1.5rem;
+  font-weight: 500;
+}
+.home .secContainer .homeText .btn .link {
+  text-decoration: none;
+  color: var(--greyColor2);
 }
 .home .secContainer .homeCard {
   width: 80%;

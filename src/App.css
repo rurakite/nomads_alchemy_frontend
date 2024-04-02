@@ -23,7 +23,7 @@
   /* --box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45); */
 }
 
-a {
+.link {
   text-decoration: none;
 }
 
@@ -63,12 +63,12 @@ li {
     border: none;
 }
 
-.btn a {
+.btn.link {
     color: var(--greyColor1);
     font-weight: 500;
 }
 
-.btn:hover a{
+.btn:hover.link{
     background: var(--HooverColor);
 }
 

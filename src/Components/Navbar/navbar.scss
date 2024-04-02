@@ -84,7 +84,7 @@
                         flex-direction: column;
                         .btn{
                             margin-top: 1rem;
-                            a{
+                            .link{
                                 font-weight: 600;
                                 &:hover{
                                     color: var(--greyColor1);
@@ -96,12 +96,12 @@
                             background: none;
                             border: 1px solid var(--HooverColor);
                             
-                            a {
+                            .link{
                                 color: var(--HooverColor);
                             }
                             &:hover{
                                 background: var(--HooverColor);
-                                a{
+                                .link{
                                     color: var(--greyColor1);
                                 }
                             }
@@ -170,21 +170,21 @@
                     }
                     .btn{
                         margin-left: 1rem;
-
-                        a{
+                        .link{
                             font-weight: 600;
+                            color: var(--greyColor2);
                         }
                     }
 
                     .loginBtn{
                         background: none;
                         border: 1px solid var(--HooverColor);
-                        a{
+                        .link{
                             color: var(--whiteColor);
                         }
                         &:hover{
                             background: var(--HooverColor);
-                            a{
+                            .link{
                                 color: var(--greyColor1);
                             }
                         }

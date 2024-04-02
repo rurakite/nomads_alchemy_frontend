@@ -15,7 +15,7 @@ const Popular = () => {
           throw new Error("Failed to fetch countries");
         }
         const data = await response.json();
-        setCountries(data);
+        setCountries(data.results);
       } catch (error) {
         console.error("Error fetching countries:", error.message);
       }
@@ -23,6 +23,8 @@ const Popular = () => {
 
     fetchCountries();
   }, []);
+
+
 
   useEffect(() => {
     Aos.init({ duration: 2000 });

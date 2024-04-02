@@ -68,19 +68,19 @@
                 color: var(--PrimaryColor);
                 font-weight: 700;
             }
-            a{
+            .link{
                 color: var(--greyColor3);
             }
             li{
                 &:hover{
                    transform: translateX(10px); 
-                   a{
+                   .link{
                         color: var(--HooverColor);
                    }
                 }
             }
 
-            a, .phone, .email{}
+            .link, .phone, .email{}
                 color: var(--greyColor3);
                 font-size: 13px;
                 font-weight: 500;
