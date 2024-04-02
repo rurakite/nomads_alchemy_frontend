@@ -13,6 +13,16 @@ const [Countries, setCountries] = useState([]);
 const [totalResults, setTotalResults] = useState(0);
 const [nextPage, setNextPage] = useState(null);
 const [previousPage, setPreviousPage] = useState(null);
+const continents = [
+  "All",
+  "Africa",
+  "Asia",
+  "Europe",
+  "North America",
+  "South America",
+  "Oceania",
+];
+const [selectedContinent, setSelectedContinent] = useState("All");
 
 const fetchCountries = async (url) => {
   try {
@@ -33,6 +43,17 @@ const fetchCountries = async (url) => {
 useEffect(() => {
   fetchCountries(baseUrl + "/countries/");
 }, []);
+
+  const handleContinentChange = (event) => {
+    setSelectedContinent(event);
+  };
+  
+  const filteredCountries = Countries.filter(
+    
+    (country) =>
+      country.continent === selectedContinent || selectedContinent === "All"
+      
+  );
 
 const handlePageChange = (url) => {
   fetchCountries(url);
@@ -56,108 +77,126 @@ const handlePageChange = (url) => {
     }
   }
 
-
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
   return (
-    <section className="popular section container">
-      <div className="secContainer">
-        <div className="secHeader flex">
-          <div
-            data-aos="fade-right"
-            data-aos-duration="2500"
-            className="textDiv"
-          >
-            <h2 className="secTitle">Brows All Countries</h2>
-            <p>
-              From spreadsheets to sunsets, ditch the desk for a life redefined.
-              Nomad's Alchemy unlocks your remote work dream.
-            </p>
-          </div>
-          <div className="secPagination">
-            <ul className="pagination ">
-              <li>
-                <Link
-                  to={previousPage || "#"}
-                  onClick={() => previousPage && handlePageChange(previousPage)}
-                >
-                  <BsArrowLeftShort className="link" />
-                </Link>
-              </li>
-              {links}
-              <li>
-                <Link
-                  to={nextPage || "#"}
-                  onClick={() => nextPage && handlePageChange(nextPage)}
-                >
-                  <BsArrowRightShort className="link" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="mainContent grid">
-          {Countries.map((country, index) => {
-            return (
-              <div
-                key={country.id}
-                data-aos="fade-up"
-                className="singleDestination"
-              >
-                <div className="destImage">
-                  {country.images.map((image) => (
-                    <img key={image.id} src={image.image} alt={country.name} />
-                  ))}
-                  <div className="overlayInfo">
-                    <h3>{country.capital}</h3>
-                    <p>The capital of {country.name}</p>
+    <>
+      <section className="popular section container">
+        <div className="secContainer">
+          <div className="secHeader flex">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="2500"
+              className="textDiv"
+            >
+              <h2 className="secTitle">Brows All Countries</h2>
+              <p>
+                From spreadsheets to sunsets, ditch the desk for a life
+                redefined. Nomad's Alchemy unlocks your remote work dream.
+              </p>
 
-                    <Link to={`/country/${country.id}`}>
-                      <BsArrowRightShort className="icon" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="destFooter">
-                  <div className="destText flex">
-                    <h6>{country.name}</h6>
-                    <span className="flex">
-                      <span className="dot">
-                        <img
-                          className="icon"
-                          src={country.flag_url}
-                          alt="Country flag"
-                        />
-                      </span>
-                    </span>
-                  </div>
-                  <div className="destIcons">
-                    <div className="destIcon">
-                      <FaRegMoneyBillAlt className="my-anchor-element" />
-                      <span>${country.cost_of_living}/m</span>
-                    </div>
-                    <div className="destIcon">
-                      <FaWifi />
-                      <span>{country.mobile_speed}mbps</span>
-                    </div>
-                    <div className="destIcon">
-                      <FaRegClock />
-                      <span>GMT+3</span>
-                    </div>
-                    <div className="destIcon">
-                      <FaTemperatureThreeQuarters />
-                      <span>{country.temperature}°C</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="continent-buttons">
+                {continents.map((continent) => (
+                  <button
+                    key={continent}
+                    className={selectedContinent === continent ? "active" : ""}
+                    onClick={() => handleContinentChange(continent)}
+                  >
+                    {continent}
+                  </button>
+                ))}
               </div>
-            );
-          })}
+            </div>
+            <div className="secPagination">
+              <ul className="pagination ">
+                <li>
+                  <Link
+                    to={previousPage || "#"}
+                    onClick={() =>
+                      previousPage && handlePageChange(previousPage)
+                    }
+                  >
+                    <BsArrowLeftShort className="link" />
+                  </Link>
+                </li>
+                {links}
+                <li>
+                  <Link
+                    to={nextPage || "#"}
+                    onClick={() => nextPage && handlePageChange(nextPage)}
+                  >
+                    <BsArrowRightShort className="link" />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mainContent grid">
+            {filteredCountries.map((country, index) => {
+              return (
+                <div
+                  key={country.id}
+                  data-aos="fade-up"
+                  className="singleDestination"
+                >
+                  <div className="destImage">
+                    {country.images.map((image) => (
+                      <img
+                        key={image.id}
+                        src={image.image}
+                        alt={country.name}
+                      />
+                    ))}
+                    <div className="overlayInfo">
+                      <h3>{country.capital}</h3>
+                      <p>The capital of {country.name}</p>
+
+                      <Link to={`/country/${country.id}`}>
+                        <BsArrowRightShort className="icon" />
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="destFooter">
+                    <div className="destText flex">
+                      <h6>{country.name}</h6>
+                      <span className="flex">
+                        <span className="dot">
+                          <img
+                            className="icon"
+                            src={country.flag_url}
+                            alt="Country flag"
+                          />
+                        </span>
+                      </span>
+                    </div>
+                    <div className="destIcons">
+                      <div className="destIcon">
+                        <FaRegMoneyBillAlt className="my-anchor-element" />
+                        <span>${country.cost_of_living}/m</span>
+                      </div>
+                      <div className="destIcon">
+                        <FaWifi />
+                        <span>{country.mobile_speed}mbps</span>
+                      </div>
+                      <div className="destIcon">
+                        <FaRegClock />
+                        <span>GMT+3</span>
+                      </div>
+                      <div className="destIcon">
+                        <FaTemperatureThreeQuarters />
+                        <span>{country.temperature}°C</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

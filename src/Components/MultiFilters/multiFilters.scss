@@ -1,0 +1,213 @@
+/* Colors */
+
+:root{
+  --PrimaryColor: #6EFAFB;
+  --HooverColor: #FFDB58;
+  --whiteColor: #ffffff;
+  --greyColor1: #222629;
+  --greyColor2: #292E32;
+  --greyColor3: #cccccc;
+  --blackColor: #1C1F22;
+  --buttonColor: linear-gradient(90deg, #FAFF00 0%, #00ACB1 100%);
+
+}
+
+.navBarSection{
+    .header{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+
+        .logoDiv{
+            border: 1.5px solid var(--whiteColor);
+            background: var(--greyColor2);
+            border-radius: 30%;
+            .logo {
+                color: var(--whiteColor);
+                font-weight: 500;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    color: var(--HooverColor);
+                    font-size: 35px;
+                }
+                .brandName{
+                    font-size: 18px;
+                    display: inline-block;
+                    width: 100px;
+                    padding-bottom: 5px;
+                }
+            }
+
+        }
+
+        @media screen and (max-width: 768px){
+
+            .navBar{
+                background: var(--greyColor2);
+                position: absolute;
+                height: max-content;
+                padding:  1.2rem;
+                width: 100%;
+                top: 0;
+                left: -500%;
+                box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
+                transition: .5s ease;
+                z-index: 1000; 
+
+                .navLists{
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    margin: auto;
+
+                    .navItem{
+                        padding: .5rem 0;
+
+                        .navLink{
+                            color: var(--greyColor3);
+                            font-size: .9rem;
+                            font-weight: 600;
+                            &:hover{
+                                color: var(--HooverColor);
+                            }
+                        }
+                    }
+                    .headerBtns{
+                        flex-direction: column;
+                        .btn{
+                            margin-top: 1rem;
+                            .link{
+                                font-weight: 600;
+                                &:hover{
+                                    color: var(--greyColor1);
+                                }
+                            }
+                        }
+
+                        .loginBtn{
+                            background: none;
+                            border: 1px solid var(--HooverColor);
+                            
+                            .link{
+                                color: var(--HooverColor);
+                            }
+                            &:hover{
+                                background: var(--HooverColor);
+                                .link{
+                                    color: var(--greyColor1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .closeNavbar{
+                    position: absolute;
+                    top: 1.7rem;
+                    right: .8rem;
+                    color: var(--greyColor3);
+                    &:hover .icon{
+                        color: var(--HooverColor);
+                    }
+                }
+            }
+
+            .activeNavbar{
+                left: 0;
+            }
+        }
+        .toggleNavbar{
+            .icon{
+                
+                font-size: 25px;
+                color: var(--whiteColor);
+                &:hover{
+                    color: var(--HooverColor);
+                }
+            }
+        }
+    }
+    .activeHeader{
+        background: var(--greyColor2);
+        box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+    }
+}
+
+ @media screen and (min-width: 769px) {
+    .navBarSection{
+        .toggleNavbar, .closeNavbar{
+            display: none;
+        }
+
+        .header{
+            padding: 1rem 2rem;
+            .navBar{
+                .navLists{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+
+                    .navItem{
+                        .navLink{
+                            color: var(--whiteColor);
+                            padding: 0 .45rem;
+                            font-size: .9rem;
+                            font-weight: 400;
+                            &:hover{
+                                color: var(--HooverColor);
+                            }
+                        }
+                        
+                    }
+                    .btn{
+                        margin-left: 1rem;
+                        .link{
+                            font-weight: 600;
+                            color: var(--greyColor2);
+                        }
+                    }
+
+                    .loginBtn{
+                        background: none;
+                        border: 1px solid var(--HooverColor);
+                        .link{
+                            color: var(--whiteColor);
+                        }
+                        &:hover{
+                            background: var(--HooverColor);
+                            .link{
+                                color: var(--greyColor1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }
+
+@media screen and (min-width: 960px){
+    .header{
+        .navBar{
+            .navLists{
+                .navItem{
+                    padding: 0 .7rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1095px){
+    .header{
+        padding: 1rem 8.5rem !important;
+    }
+}

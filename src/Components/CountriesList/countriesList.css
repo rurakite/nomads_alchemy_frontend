@@ -81,3 +81,22 @@
 .singleDestination .destFooter .destIcons span {
   font-size: 0.7rem;
 }/*# sourceMappingURL=countriesList.css.map */
+
+
+.continent-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.continent-buttons button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.continent-buttons button.active {
+  background-color: #eee;
+}
